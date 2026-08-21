@@ -357,3 +357,18 @@ Automated priority classification
 DataStraw Support CRM
 
 A customer support ticket management system developed using FastAPI and modern web technologies.
+
+
+## 🌐 Live Deployment
+
+The backend is deployed on Railway.
+
+**Live API:**
+
+https://datastraw-support-crm-production-6bd5.up.railway.app
+
+**API Documentation:**
+
+https://datastraw-support-crm-production-6bd5.up.railway.app/docs
+
+🚀 The FastAPI backend is deployed on Railway and is accessible through the live API URL above.
