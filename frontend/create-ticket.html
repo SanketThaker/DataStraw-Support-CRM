@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Support CRM | Create Ticket</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body class="min-h-screen bg-slate-50 text-slate-900">
+
+
+    <!-- ==========================================
+         DESKTOP SIDEBAR
+         ========================================== -->
+
+    <aside
+        class="hidden lg:flex fixed left-0 top-0 bottom-0 w-64
+               bg-white border-r border-slate-200
+               flex-col z-40">
+
+        <div class="px-6 py-7">
+
+            <h1 class="text-xl font-bold">
+                Support CRM
+            </h1>
+
+            <p class="text-sm text-slate-500 mt-1">
+                Support Management
+            </p>
+
+        </div>
+
+
+        <nav class="px-4 space-y-2">
+
+            <a
+                href="agent.html"
+                class="flex items-center gap-3
+                       px-4 py-3
+                       rounded-xl
+                       text-slate-600
+                       hover:bg-slate-100
+                       transition">
+
+                <span class="text-lg">
+                    ▦
+                </span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="create-ticket.html"
+                class="flex items-center gap-3
+                       px-4 py-3
+                       rounded-xl
+                       bg-blue-50
+                       text-blue-700
+                       font-medium">
+
+                <span class="text-lg">
+                    +
+                </span>
+
+                Create Ticket
+
+            </a>
+
+        </nav>
+
+
+        <div class="mt-auto p-5">
+
+            <div
+                class="bg-slate-50
+                       rounded-2xl
+                       p-4">
+
+                <p class="text-xs text-slate-500">
+                    Signed in as
+                </p>
+
+                <p class="font-medium mt-1">
+                    Support Agent
+                </p>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- ==========================================
+         MOBILE HEADER
+         ========================================== -->
+
+    <header
+        class="lg:hidden sticky top-0 z-40
+               bg-white/90
+               backdrop-blur-md
+               border-b border-slate-200">
+
+        <div
+            class="flex items-center
+                   justify-between
+                   px-5 py-4">
+
+            <div>
+
+                <h1 class="font-bold text-lg">
+                    Support CRM
+                </h1>
+
+                <p class="text-xs text-slate-500">
+                    Create Ticket
+                </p>
+
+            </div>
+
+
+            <a
+                href="agent.html"
+                class="px-4 py-2
+                       rounded-xl
+                       bg-slate-100
+                       text-sm
+                       font-medium
+                       hover:bg-slate-200
+                       transition">
+
+                ← Back
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         MAIN CONTENT
+         ========================================== -->
+
+    <main class="lg:ml-64 min-h-screen">
+
+        <div
+            class="max-w-3xl
+                   mx-auto
+                   px-5 sm:px-8
+                   py-8 lg:py-12">
+
+
+            <!-- ======================================
+                 PAGE HEADER
+                 ====================================== -->
+
+            <div class="mb-8">
+
+                <p
+                    class="text-sm
+                           font-medium
+                           text-blue-600
+                           mb-2">
+
+                    Support Management
+
+                </p>
+
+
+                <h2
+                    class="text-3xl
+                           sm:text-4xl
+                           font-bold
+                           tracking-tight">
+
+                    Create New Ticket
+
+                </h2>
+
+
+                <p
+                    class="text-slate-500
+                           mt-2">
+
+                    Create a support request
+                    for a customer.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- ======================================
+                 FORM CARD
+                 ====================================== -->
+
+            <div
+                class="bg-white
+                       border
+                       border-slate-200
+                       rounded-2xl
+                       shadow-sm
+                       p-6
+                       sm:p-8">
+
+
+                <!-- ==================================
+                     CREATE TICKET FORM
+                     ================================== -->
+
+                <form id="createTicketForm">
+
+
+                    <!-- CUSTOMER NAME -->
+
+                    <div class="mb-5">
+
+                        <label
+                            for="customerName"
+                            class="block
+                                   text-sm
+                                   font-medium
+                                   mb-2">
+
+                            Customer Name
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            name="customer_name"
+                            placeholder="Enter customer name"
+                            autocomplete="name"
+                            required
+                            class="w-full
+                                   px-4 py-3
+                                   rounded-xl
+                                   border
+                                   border-slate-200
+                                   bg-slate-50
+                                   outline-none
+                                   focus:ring-2
+                                   focus:ring-blue-500
+                                   focus:border-blue-500
+                                   transition">
+
+                    </div>
+
+
+
+                    <!-- CUSTOMER EMAIL -->
+
+                    <div class="mb-5">
+
+                        <label
+                            for="customerEmail"
+                            class="block
+                                   text-sm
+                                   font-medium
+                                   mb-2">
+
+                            Customer Email
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="customerEmail"
+                            name="customer_email"
+                            placeholder="customer@example.com"
+                            autocomplete="email"
+                            required
+                            class="w-full
+                                   px-4 py-3
+                                   rounded-xl
+                                   border
+                                   border-slate-200
+                                   bg-slate-50
+                                   outline-none
+                                   focus:ring-2
+                                   focus:ring-blue-500
+                                   focus:border-blue-500
+                                   transition">
+
+                    </div>
+
+
+
+                    <!-- SUBJECT -->
+
+                    <div class="mb-5">
+
+                        <label
+                            for="subject"
+                            class="block
+                                   text-sm
+                                   font-medium
+                                   mb-2">
+
+                            Subject
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            placeholder="Briefly describe the issue"
+                            required
+                            class="w-full
+                                   px-4 py-3
+                                   rounded-xl
+                                   border
+                                   border-slate-200
+                                   bg-slate-50
+                                   outline-none
+                                   focus:ring-2
+                                   focus:ring-blue-500
+                                   focus:border-blue-500
+                                   transition">
+
+                    </div>
+
+
+
+                    <!-- DESCRIPTION -->
+
+                    <div class="mb-7">
+
+                        <label
+                            for="description"
+                            class="block
+                                   text-sm
+                                   font-medium
+                                   mb-2">
+
+                            Description
+
+                        </label>
+
+
+                        <textarea
+                            id="description"
+                            name="description"
+                            rows="6"
+                            placeholder="Describe the customer's issue in detail..."
+                            required
+                            class="w-full
+                                   px-4 py-3
+                                   rounded-xl
+                                   border
+                                   border-slate-200
+                                   bg-slate-50
+                                   outline-none
+                                   resize-none
+                                   focus:ring-2
+                                   focus:ring-blue-500
+                                   focus:border-blue-500
+                                   transition"></textarea>
+
+
+                        <p
+                            class="text-xs
+                                   text-slate-400
+                                   mt-2">
+
+                            Provide enough information
+                            for the support team to
+                            understand the issue.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- BUTTONS -->
+
+                    <div
+                        class="flex flex-col
+                               sm:flex-row
+                               gap-3">
+
+
+                        <a
+                            href="agent.html"
+                            class="flex-1
+                                   text-center
+                                   px-5 py-3
+                                   rounded-xl
+                                   bg-slate-100
+                                   text-slate-700
+                                   font-medium
+                                   hover:bg-slate-200
+                                   transition">
+
+                            Cancel
+
+                        </a>
+
+
+                        <button
+                            type="submit"
+                            id="submitButton"
+                            class="flex-1
+                                   px-5 py-3
+                                   rounded-xl
+                                   bg-blue-600
+                                   text-white
+                                   font-medium
+                                   shadow-lg
+                                   shadow-blue-600/20
+                                   hover:bg-blue-700
+                                   hover:-translate-y-0.5
+                                   transition-all
+                                   disabled:opacity-60
+                                   disabled:cursor-not-allowed">
+
+                            Create Ticket
+
+                        </button>
+
+                    </div>
+
+
+                </form>
+
+
+
+                <!-- ======================================
+                     SUCCESS CONFIRMATION
+                     ====================================== -->
+
+                <div
+                    id="ticketSuccess"
+                    class="hidden
+                           mt-6
+                           rounded-2xl
+                           border
+                           border-emerald-200
+                           bg-emerald-50
+                           p-6">
+
+
+                    <div
+                        class="flex
+                               items-start
+                               gap-4">
+
+
+                        <!-- ICON -->
+
+                        <div
+                            class="w-12
+                                   h-12
+                                   rounded-xl
+                                   bg-emerald-100
+                                   text-emerald-600
+                                   flex
+                                   items-center
+                                   justify-center
+                                   text-xl
+                                   font-bold
+                                   shrink-0">
+
+                            ✓
+
+                        </div>
+
+
+                        <!-- CONTENT -->
+
+                        <div class="flex-1">
+
+                            <h3
+                                class="text-lg
+                                       font-semibold
+                                       text-emerald-800">
+
+                                Ticket Created Successfully!
+
+                            </h3>
+
+
+                            <p
+                                class="text-sm
+                                       text-emerald-700
+                                       mt-1">
+
+                                The support ticket has
+                                been successfully created.
+
+                            </p>
+
+
+                            <!-- TICKET ID -->
+
+                            <div
+                                class="mt-4
+                                       bg-white
+                                       border
+                                       border-emerald-200
+                                       rounded-xl
+                                       p-4">
+
+                                <p
+                                    class="text-xs
+                                           text-slate-500">
+
+                                    Ticket ID
+
+                                </p>
+
+
+                                <p
+                                    id="createdTicketId"
+                                    class="text-2xl
+                                           font-bold
+                                           text-blue-600
+                                           mt-1">
+
+                                </p>
+
+
+                                <p
+                                    class="text-xs
+                                           text-slate-500
+                                           mt-2">
+
+                                    You can use this ID
+                                    to open and manage
+                                    the ticket.
+
+                                </p>
+
+                            </div>
+
+
+                            <!-- CREATE ANOTHER -->
+
+                            <button
+                                id="createAnotherButton"
+                                type="button"
+                                class="mt-4
+                                       px-5 py-2.5
+                                       rounded-xl
+                                       bg-white
+                                       border
+                                       border-emerald-200
+                                       text-emerald-700
+                                       text-sm
+                                       font-medium
+                                       hover:bg-emerald-50
+                                       transition">
+
+                                Create Another Ticket
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- ======================================
+                     ERROR MESSAGE
+                     ====================================== -->
+
+                <div
+                    id="ticketError"
+                    class="hidden
+                           mt-6
+                           rounded-xl
+                           border
+                           border-red-200
+                           bg-red-50
+                           p-4">
+
+                    <p
+                        id="ticketErrorMessage"
+                        class="text-sm
+                               text-red-700">
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="js/create-ticket.js"></script>
+
+</body>
+
+</html>

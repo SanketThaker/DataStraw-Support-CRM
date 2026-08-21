@@ -1,0 +1,34 @@
+# Python virtual environment
+venv/
+.venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables
+.env
+.env.*
+
+# Keep example environment file
+!.env.example
+
+# VS Code
+.vscode/
+
+# SQLite temporary files
+*.db-journal
+*.db-shm
+*.db-wal
+
+# SQLite database
+support_crm.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

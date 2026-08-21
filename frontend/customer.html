@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Support CRM | Customer
+    </title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body
+    class="min-h-screen
+           bg-slate-50
+           text-slate-900">
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <!-- ==========================================
+     HEADER
+     ========================================== -->
+
+<header
+    class="bg-white
+           border-b
+           border-slate-200">
+
+    <div
+        class="max-w-5xl
+               mx-auto
+               px-5
+               sm:px-8
+               py-5
+               flex
+               items-center
+               justify-between
+               gap-4">
+
+        <div>
+
+            <h1
+                class="text-xl
+                       sm:text-2xl
+                       font-bold">
+
+                Support CRM
+
+            </h1>
+
+
+            <p
+                class="text-sm
+                       text-slate-500
+                       mt-1">
+
+                Customer Support Portal
+
+            </p>
+
+        </div>
+
+
+        <!-- ======================================
+             TRACK TICKET BUTTON
+             ====================================== -->
+
+        <a
+            href="track-ticket.html"
+            class="shrink-0
+                   px-4
+                   py-2.5
+                   rounded-xl
+                   bg-blue-600
+                   text-white
+                   text-sm
+                   font-medium
+                   hover:bg-blue-700
+                   hover:-translate-y-0.5
+                   transition-all">
+
+            Track Ticket
+
+        </a>
+
+    </div>
+
+</header>
+
+
+    <!-- ==========================================
+         MAIN
+         ========================================== -->
+
+    <main
+        class="max-w-3xl
+               mx-auto
+               px-5
+               sm:px-8
+               py-10">
+
+
+        <!-- ==========================================
+             TITLE
+             ========================================== -->
+
+        <div class="mb-8">
+
+            <p
+                class="text-sm
+                       font-medium
+                       text-blue-600
+                       mb-2">
+
+                Customer Support
+
+            </p>
+
+
+            <h2
+                class="text-3xl
+                       sm:text-4xl
+                       font-bold">
+
+                Create a Support Ticket
+
+            </h2>
+
+
+            <p
+                class="mt-3
+                       text-slate-500
+                       leading-relaxed">
+
+                Tell us about your issue and our
+                support team will get back to you.
+
+            </p>
+
+        </div>
+
+
+        <!-- ==========================================
+             FORM CARD
+             ========================================== -->
+
+        <div
+            class="bg-white
+                   border
+                   border-slate-200
+                   rounded-2xl
+                   shadow-sm
+                   p-6
+                   sm:p-8">
+
+
+            <!-- ======================================
+                 CREATE TICKET FORM
+                 ====================================== -->
+
+            <form
+                id="customerTicketForm">
+
+
+                <!-- ==============================
+                     CUSTOMER NAME
+                     ============================== -->
+
+                <div>
+
+                    <label
+                        for="customerName"
+                        class="block
+                               text-sm
+                               font-medium
+                               text-slate-700
+                               mb-2">
+
+                        Full Name
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="customerName"
+                        name="customerName"
+                        placeholder="Enter your name"
+                        required
+                        autocomplete="name"
+                        class="w-full
+                               px-4
+                               py-3
+                               rounded-xl
+                               border
+                               border-slate-200
+                               bg-slate-50
+                               outline-none
+                               focus:bg-white
+                               focus:border-blue-500
+                               focus:ring-2
+                               focus:ring-blue-100
+                               transition">
+
+                </div>
+
+
+                <!-- ==============================
+                     EMAIL
+                     ============================== -->
+
+                <div class="mt-5">
+
+                    <label
+                        for="customerEmail"
+                        class="block
+                               text-sm
+                               font-medium
+                               text-slate-700
+                               mb-2">
+
+                        Email Address
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        name="customerEmail"
+                        placeholder="you@example.com"
+                        required
+                        autocomplete="email"
+                        class="w-full
+                               px-4
+                               py-3
+                               rounded-xl
+                               border
+                               border-slate-200
+                               bg-slate-50
+                               outline-none
+                               focus:bg-white
+                               focus:border-blue-500
+                               focus:ring-2
+                               focus:ring-blue-100
+                               transition">
+
+                </div>
+
+
+                <!-- ==============================
+                     SUBJECT
+                     ============================== -->
+
+                <div class="mt-5">
+
+                    <label
+                        for="subject"
+                        class="block
+                               text-sm
+                               font-medium
+                               text-slate-700
+                               mb-2">
+
+                        Subject
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        placeholder="What is your issue about?"
+                        required
+                        class="w-full
+                               px-4
+                               py-3
+                               rounded-xl
+                               border
+                               border-slate-200
+                               bg-slate-50
+                               outline-none
+                               focus:bg-white
+                               focus:border-blue-500
+                               focus:ring-2
+                               focus:ring-blue-100
+                               transition">
+
+                </div>
+
+
+                <!-- ==============================
+                     DESCRIPTION
+                     ============================== -->
+
+                <div class="mt-5">
+
+                    <label
+                        for="description"
+                        class="block
+                               text-sm
+                               font-medium
+                               text-slate-700
+                               mb-2">
+
+                        Describe Your Issue
+
+                    </label>
+
+
+                    <textarea
+                        id="description"
+                        name="description"
+                        rows="6"
+                        placeholder="Please explain your issue in detail..."
+                        required
+                        class="w-full
+                               px-4
+                               py-3
+                               rounded-xl
+                               border
+                               border-slate-200
+                               bg-slate-50
+                               outline-none
+                               resize-none
+                               focus:bg-white
+                               focus:border-blue-500
+                               focus:ring-2
+                               focus:ring-blue-100
+                               transition"></textarea>
+
+                </div>
+
+
+                <!-- ==============================
+                     SUBMIT BUTTON
+                     ============================== -->
+
+                <button
+                    id="customerSubmitButton"
+                    type="submit"
+                    class="w-full
+                           mt-6
+                           px-5
+                           py-3.5
+                           rounded-xl
+                           bg-blue-600
+                           text-white
+                           font-medium
+                           hover:bg-blue-700
+                           hover:-translate-y-0.5
+                           disabled:opacity-50
+                           disabled:cursor-not-allowed
+                           transition-all">
+
+                    Submit Ticket
+
+                </button>
+
+            </form>
+
+
+            <!-- ==========================================
+                 SUCCESS MESSAGE
+                 ========================================== -->
+
+            <div
+                id="ticketSuccess"
+                class="hidden
+                       mt-8
+                       rounded-2xl
+                       border
+                       border-emerald-200
+                       bg-emerald-50
+                       p-6">
+
+
+                <div
+                    class="flex
+                           items-start
+                           gap-4">
+
+
+                    <!-- SUCCESS ICON -->
+
+                    <div
+                        class="w-12
+                               h-12
+                               rounded-xl
+                               bg-emerald-100
+                               text-emerald-600
+                               flex
+                               items-center
+                               justify-center
+                               text-xl
+                               font-bold
+                               shrink-0">
+
+                        ✓
+
+                    </div>
+
+
+                    <!-- SUCCESS CONTENT -->
+
+                    <div class="flex-1">
+
+                        <h3
+                            class="font-semibold
+                                   text-emerald-800
+                                   text-lg">
+
+                            Ticket Created Successfully!
+
+                        </h3>
+
+
+                        <p
+                            class="text-sm
+                                   text-emerald-700
+                                   mt-1">
+
+                            Your support ticket has
+                            been submitted successfully.
+
+                        </p>
+
+
+                        <!-- TICKET ID -->
+
+                        <div
+                            class="mt-5
+                                   bg-white
+                                   border
+                                   border-emerald-200
+                                   rounded-xl
+                                   p-4">
+
+                            <p
+                                class="text-xs
+                                       text-slate-500">
+
+                                Your Ticket ID
+
+                            </p>
+
+
+                            <p
+                                id="createdTicketId"
+                                class="text-2xl
+                                       font-bold
+                                       text-blue-600
+                                       mt-1">
+
+                            </p>
+
+
+                            <p
+                                class="text-xs
+                                       text-slate-500
+                                       mt-2">
+
+                                Please save this ID
+                                to track your ticket.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- CREATE ANOTHER -->
+
+                        <button
+                            id="createAnotherButton"
+                            type="button"
+                            class="mt-4
+                                   px-5
+                                   py-2.5
+                                   rounded-xl
+                                   bg-white
+                                   border
+                                   border-emerald-200
+                                   text-emerald-700
+                                   text-sm
+                                   font-medium
+                                   hover:bg-emerald-50
+                                   transition">
+
+                            Create Another Ticket
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+                 ERROR MESSAGE
+                 ========================================== -->
+
+            <div
+                id="ticketError"
+                class="hidden
+                       mt-6
+                       rounded-xl
+                       border
+                       border-red-200
+                       bg-red-50
+                       p-4">
+
+
+                <p
+                    id="ticketErrorMessage"
+                    class="text-sm
+                           text-red-700">
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="js/customer.js"></script>
+
+</body>
+
+</html>

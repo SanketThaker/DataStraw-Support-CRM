@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Support CRM | Track Ticket</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link
+        rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+
+<body
+    class="min-h-screen
+           bg-slate-50
+           text-slate-900">
+
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+
+    <header
+        class="bg-white
+               border-b
+               border-slate-200">
+
+        <div
+            class="max-w-5xl
+                   mx-auto
+                   px-5
+                   sm:px-8
+                   py-5
+                   flex
+                   items-center
+                   justify-between">
+
+            <div>
+
+                <h1
+                    class="text-xl
+                           sm:text-2xl
+                           font-bold">
+
+                    Support CRM
+
+                </h1>
+
+
+                <p
+                    class="text-sm
+                           text-slate-500
+                           mt-1">
+
+                    Customer Support Portal
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="customer.html"
+                class="px-4
+                       py-2
+                       rounded-xl
+                       bg-slate-100
+                       text-sm
+                       font-medium
+                       hover:bg-slate-200
+                       transition">
+
+                ← Back
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================================
+         MAIN
+         ========================================== -->
+
+    <main
+        class="max-w-3xl
+               mx-auto
+               px-5
+               sm:px-8
+               py-10">
+
+
+        <!-- ======================================
+             TITLE
+             ====================================== -->
+
+        <div class="mb-8">
+
+            <p
+                class="text-sm
+                       font-medium
+                       text-blue-600
+                       mb-2">
+
+                Customer Support
+
+            </p>
+
+
+            <h2
+                class="text-3xl
+                       sm:text-4xl
+                       font-bold">
+
+                Track Your Ticket
+
+            </h2>
+
+
+            <p
+                class="mt-3
+                       text-slate-500
+                       leading-relaxed">
+
+                Enter your Ticket ID to view
+                the latest information about
+                your support request.
+
+            </p>
+
+        </div>
+
+
+        <!-- ======================================
+             SEARCH CARD
+             ====================================== -->
+
+        <div
+            class="bg-white
+                   border
+                   border-slate-200
+                   rounded-2xl
+                   shadow-sm
+                   p-6
+                   sm:p-8">
+
+
+            <form
+                id="trackTicketForm">
+
+
+                <label
+                    for="ticketIdInput"
+                    class="block
+                           text-sm
+                           font-medium
+                           text-slate-700
+                           mb-2">
+
+                    Ticket ID
+
+                </label>
+
+
+                <div
+                    class="flex flex-col
+                           sm:flex-row
+                           gap-3">
+
+
+                    <input
+                        type="text"
+                        id="ticketIdInput"
+                        placeholder="Example: TKT-001"
+                        autocomplete="off"
+                        required
+                        class="flex-1
+                               px-4
+                               py-3
+                               rounded-xl
+                               border
+                               border-slate-200
+                               bg-slate-50
+                               uppercase
+                               outline-none
+                               focus:bg-white
+                               focus:ring-2
+                               focus:ring-blue-500
+                               focus:border-blue-500
+                               transition">
+
+
+                    <button
+                        id="trackTicketButton"
+                        type="submit"
+                        class="px-6
+                               py-3
+                               rounded-xl
+                               bg-blue-600
+                               text-white
+                               font-medium
+                               hover:bg-blue-700
+                               disabled:opacity-60
+                               disabled:cursor-not-allowed
+                               transition">
+
+                        Track Ticket
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+            <!-- ==================================
+                 ERROR
+                 ================================== -->
+
+            <div
+                id="trackError"
+                class="hidden
+                       mt-6
+                       rounded-xl
+                       border
+                       border-red-200
+                       bg-red-50
+                       p-4">
+
+                <p
+                    id="trackErrorMessage"
+                    class="text-sm
+                           text-red-700">
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ======================================
+             TICKET RESULT
+             ====================================== -->
+
+        <div
+            id="ticketResult"
+            class="hidden
+                   mt-6
+                   bg-white
+                   border
+                   border-slate-200
+                   rounded-2xl
+                   shadow-sm
+                   p-6
+                   sm:p-8">
+
+
+            <!-- ==================================
+                 HEADER
+                 ================================== -->
+
+            <div
+                class="flex flex-col
+                       sm:flex-row
+                       sm:items-start
+                       sm:justify-between
+                       gap-4">
+
+
+                <div>
+
+                    <div
+                        class="flex
+                               flex-wrap
+                               items-center
+                               gap-3
+                               mb-3">
+
+
+                        <span
+                            id="resultTicketId"
+                            class="text-sm
+                                   font-semibold
+                                   text-blue-600">
+
+                        </span>
+
+
+                        <span
+                            id="resultStatus"
+                            class="px-3
+                                   py-1
+                                   rounded-full
+                                   text-xs
+                                   font-semibold">
+
+                        </span>
+
+                    </div>
+
+
+                    <h3
+                        id="resultSubject"
+                        class="text-2xl
+                               font-bold">
+
+                    </h3>
+
+                </div>
+
+
+                <p
+                    id="resultDate"
+                    class="text-sm
+                           text-slate-400">
+
+                </p>
+
+            </div>
+
+
+            <!-- ==================================
+                 DESCRIPTION
+                 ================================== -->
+
+            <div
+                class="mt-8
+                       pt-6
+                       border-t
+                       border-slate-100">
+
+                <h4
+                    class="text-sm
+                           font-semibold
+                           text-slate-500
+                           uppercase
+                           tracking-wide">
+
+                    Description
+
+                </h4>
+
+
+                <p
+                    id="resultDescription"
+                    class="mt-3
+                           text-slate-700
+                           leading-relaxed">
+
+                </p>
+
+            </div>
+
+
+            <!-- ==================================
+                 CUSTOMER INFORMATION
+                 ================================== -->
+
+            <div
+                class="mt-8">
+
+
+                <h4
+                    class="text-sm
+                           font-semibold
+                           text-slate-500
+                           uppercase
+                           tracking-wide
+                           mb-4">
+
+                    Customer Information
+
+                </h4>
+
+
+                <div
+                    class="grid
+                           sm:grid-cols-2
+                           gap-4">
+
+
+                    <div
+                        class="bg-slate-50
+                               rounded-xl
+                               p-4">
+
+                        <p
+                            class="text-xs
+                                   text-slate-500">
+
+                            Name
+
+                        </p>
+
+
+                        <p
+                            id="resultCustomerName"
+                            class="font-medium
+                                   mt-1">
+
+                        </p>
+
+                    </div>
+
+
+                    <div
+                        class="bg-slate-50
+                               rounded-xl
+                               p-4">
+
+                        <p
+                            class="text-xs
+                                   text-slate-500">
+
+                            Email
+
+                        </p>
+
+
+                        <p
+                            id="resultCustomerEmail"
+                            class="font-medium
+                                   mt-1
+                                   break-all">
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 NOTES
+                 ================================== -->
+
+            <div
+                class="mt-8
+                       pt-6
+                       border-t
+                       border-slate-100">
+
+
+                <h4
+                    class="text-lg
+                           font-semibold">
+
+                    Updates
+
+                </h4>
+
+
+                <div
+                    id="resultNotes"
+                    class="mt-4">
+
+                    <p
+                        class="text-sm
+                               text-slate-500">
+
+                        No updates yet.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+
+    <script src="js/track-ticket.js"></script>
+
+</body>
+
+</html>
