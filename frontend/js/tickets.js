@@ -10,7 +10,7 @@ console.log("tickets.js loaded");
 // ==========================================
 
 const API_URL =
-    "http://127.0.0.1:8000";
+    "https://datastraw-support-crm-production-6bd5.up.railway.app";
 
 
 // ==========================================

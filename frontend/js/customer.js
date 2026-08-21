@@ -10,7 +10,7 @@ console.log("customer.js loaded");
 // API
 // ==========================================
 
-const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://datastraw-support-crm-production-6bd5.up.railway.app";
 
 
 // ==========================================

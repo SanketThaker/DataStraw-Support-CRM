@@ -776,7 +776,7 @@ if (window.supportCRMInitialized) {
 
             const response =
                 await fetch(
-                    "http://127.0.0.1:8000/api/tickets/",
+                    "https://datastraw-support-crm-production-6bd5.up.railway.app/api/tickets/",
                     {
                         method: "GET",
                         cache: "no-store"
