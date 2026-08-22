@@ -285,3 +285,19 @@ main{
         border-radius: 1rem;
     }
 }
+
+.back-button {
+    display: inline-block;
+    padding: 10px 16px;
+    margin: 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    background: #1e293b;
+    color: white;
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    background: #334155;
+}
